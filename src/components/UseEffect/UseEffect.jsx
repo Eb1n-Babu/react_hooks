@@ -1,15 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 function UseEffect() {
 
-    const [name, setName] = React.useState('');
+    const [count, setCount] = React.useState(0);
 
-    setTimeout(() => {
-      setName('tRENT');
-    }, 5000);
+    useEffect(() => {
+        console.log("componentDidMount");
+        return () => {
+            console.log("componentWillUnmount");
+        }
+    },[]);
 
     return (
-        <div>{name}</div>
+        <div>
+            <h1>count {count}</h1>
+            <button onClick={() => setCount(count+1)}>CLICK</button>
+        </div>
     );
 }
 
