@@ -1,12 +1,12 @@
 import './App.css'
-import UseState from "./components/UseState/UseState.jsx";
-import UseEffect from "./components/UseEffect/UseEffect.jsx";
-import UseEffect1 from "./components/UseEffect/UseEffect1.jsx";
+import UseRef from "./components/UseRef.jsx";
+import Parent from "./components/UseCallBack/Parent.jsx";
+
 
 function App() {
   return (
     <div className="App">
-        <UseEffect1 />
+        <Parent/>
     </div>
   )
 }
